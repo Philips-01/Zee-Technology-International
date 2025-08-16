@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZeeTech International</title>
+  <!-- Bootstrap CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* Hero section with video */
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+    .hero video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .stats {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <!-- Put the logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/zee logo.png" alt="Logo" height="40">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+<!-- Acheive space between them -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto my-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Why ZeeTech?</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <!-- Deep drop is supposed to be here so if you can acheive it -->
+          <a href="#"><i class="bi bi-person fs-5"></i></a>
+          <a href="#"><i class="bi bi-search fs-5"></i></a>
+          <!-- This is the link to get directly yout infornations -->
+          <a class="btn btn-primary" href="form.html">Get started</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Background Video -->
+    <!-- it is supposed to be a bit blur -->
+    <video autoplay muted loop playsinline>
+      <source src="assets/img/banner-atuoplay.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-lg-7">
+          <h1 class="display-4 fw-bold">
+            Kickstart your career in tech today with ZeeTech International
+          </h1>
+          <p class="lead mt-3">
+            We are team of talented software developers raising the Next Generation of TechStars
+          </p>
+          <div class="d-flex align-items-center gap-3 mt-4">
+            <a href="#" class="btn btn-warning btn-lg">Get started</a>
+            <a href="#" class="fw-bold text-white gap-3">Why ZeeTech International</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+     <!-- a white line is supposed to be inbetween them  -->
+    <div class="stats text-white py-4">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-6 col-md-3 mb-3 mb-md-0">
+            <h5 class="fw-bold"><span class="counter" data-target="13">0</span>+</h5>
+            <p class="mb-0 small">Clients</p>
+          </div>
+          <div class="col-6 col-md-3 mb-3 mb-md-0">
+            <h5 class="fw-bold"><span class="counter" data-target="3">0</span></h5>
+            <p class="mb-0 small">International Clients</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h5 class="fw-bold"><span class="counter" data-target="200">0</span></h5>
+            <p class="mb-0 small">Hours of Support</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h5 class="fw-bold"><span class="counter" data-target="3">0</span></h5>
+            <p class="mb-0 small">Workers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Counter Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll(".counter");
+      const speed = 200; // lower = faster
+
+      const animateCounters = () => {
+        counters.forEach(counter => {
+          const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(updateCount, 20);
+            } else {
+              counter.innerText = target.toLocaleString();
+            }
+          };
+          updateCount();
+        });
+      };
+
+      // Trigger animation when stats enter viewport
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect(); // run once
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(document.querySelector(".stats"));
+    });
+  </script>
+
+</body>
+</html>
