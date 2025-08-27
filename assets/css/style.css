@@ -1,0 +1,374 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-title p {
+  margin: 0 auto;
+  font-size: 16px;
+  color: #6c757d;
+  width: 70%;
+}
+
+/* Header */
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 0;
+  box-shadow: 0px 2px 15px rgba(0,0,0,0.1);
+  transition: all 0.5s;
+}
+
+.header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.header .logo span {
+  color: #0d6efd;
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar .active {
+  color: #0d6efd;
+}
+
+.mobile-nav-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: inline-block;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar.navbar-mobile {
+    display: block;
+    background: #fff;
+    padding: 20px;
+  }
+  .navbar.navbar-mobile ul {
+    flex-direction: column;
+  }
+  .navbar.navbar-mobile a {
+    padding: 10px 0;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.round-photo {
+  width: 120px;           /* Set size */
+  height: 120px;          /* Must match width for perfect circle */
+  object-fit: cover;      /* Keeps image from stretching */
+  border-radius: 50%;     /* Makes it round */
+  border: 4px solid #ffc107; /* Border color and thickness */
+}
+
+.round-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffc107;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.round-photo:hover {
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.7);
+  transform: scale(1.05);
+}
+
+/* Make stars yellow */
+.rating i {
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+
+/* Card hover effect */
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+/* Section styling */
+.pricing-section {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.pricing-card {
+  padding: 60px 0;
+  text-align: left;
+}
+
+/* Pricing cards */
+.pricing-item {
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+}
+
+.pricing-item:hover {
+  border-color: #ff9800;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+/* Price heading */
+.pricing-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.price s {
+  font-size: 1rem;
+  color: #999;
+}
+
+.price span {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* List styling */
+.pricing-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pricing-item ul li {
+  font-size: 1rem;
+  padding: 8px 0;
+  color: #555;
+}
+
+.pricing-item ul li i {
+  color: #4caf50;
+  margin-right: 8px;
+}
+
+.pricing-item ul li.na {
+  color: #999;
+}
+
+.pricing-item ul li.na i {
+  color: #e53935;
+}
+
+/* Button styling */
+.buy-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #ff9800;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255,152,0,0.3);
+  width: 100%;
+  text-align: center;
+}
+
+.buy-btn:hover {
+  background: #e68900;
+  box-shadow: 0 5px 15px rgba(255,152,0,0.5);
+  transform: scale(1.05);
+}
+
+/* Section Styling */
+.team-section {
+  padding: 20px 0;
+}
+
+/* Section Title */
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section-title p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Team Member Card */
+.team-member {
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 2px solid #ffc107;
+  /* opacity: 0; */
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+/* Round Profile Image */
+.member-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffc107;
+  transition: transform 0.3s ease;
+}
+
+/* Image Hover Zoom */
+.member-img img:hover {
+  transform: scale(1.05);
+}
+
+/* Member Info */
+.member-info h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.member-info span {
+  display: block;
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.member-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Social Links */
+.social a {
+  margin-right: 10px;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: #ffc107;
+}
+
+/* Animation: Appear on Scroll */
+.team-member.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+footer{
+  background-color: #6d83a5;
+  color: #fff;
+}
+.footer-last{
+  border-top: 1px solid white;
+}
+.useful ul li, .our-services ul li{
+  list-style-type: none;
+}
+
+.socials-links{
+  display: flex;
+ column-gap: 40px;
+ margin-right: 80px;
+}
+.privacy{
+  margin-right: 50px;
+}
+.socials a i{
+  font-size: 35px;
+}
+.socials{
+  justify-items: end;
+}
