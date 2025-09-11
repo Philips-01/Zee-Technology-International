@@ -3,179 +3,342 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZeeTech International</title>
+  <title>ZeeTech Form Page</title>
   <!-- Bootstrap CSS -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
-    /* Hero section with video */
-    .hero {
+    /* Hero section plain background */
+    .hero-form {
       position: relative;
-      height: 100vh;
-      overflow: hidden;
-      color: #fff;
+      min-height: 100vh;
+      background: #f8f9fa; /* Light gray plain background */
       display: flex;
+      justify-content: center;
       align-items: center;
+      padding-top: 120px; /* offset for fixed navbar */
+      padding-bottom: 60px;
     }
-    .hero video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-    .hero-overlay {
-      background: rgba(0,0,0,0.5);
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    .stats {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+
+    .form-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      max-width: 600px;
       width: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 2;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-    <div class="container">
-      <!-- Put the logo -->
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/img/zee logo.png" alt="Logo" height="40">
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg px-lg-5 bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/dark_bg_logo.png" alt="Logo" width="150" class="me-2">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-<!-- Acheive space between them -->
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto my-2">
-          <li class="nav-item"><a class="nav-link" href="index.html">Why ZeeTech?</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Why ZeeTech?</a></li>
+          <!-- <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li> -->
+           <li class="nav-item dropdown position-static">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="aboutMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu mega-menu p-4 shadow" aria-labelledby="aboutMenu">
+              <div class="row">
+                <!-- Left content -->
+                <div class="col-md-8 col-sm-8">
+                  <h4 class="fw-bold mb-3">About Zee Technology International</h4>
+                  <p class="text-muted">We are a team of talented software developers raising the Next Generation of TechStars</p>
+                  <div class="row mt-4">
+                    <div class="col-md-6 col-sm-6 mb-3 border-end">
+                      <h6 class="fw-bold">Who We Are</h6>
+                      <p class="small">We’re a multidisciplinary team focused on delivering high‑quality services.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 mb-3">
+                      <h6 class="fw-bold">Our Values</h6>
+                      <p class="small">Principles . Beliefs . Cores<p>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6 col-sm-6 mb-3 border-end">
+                      <h6 class="fw-bold">Our Teams</h6>
+                      <p class="small">Meet our Visionaries</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 mb-3">
+                      <h6 class="fw-bold">Our Missions</h6>
+                      <p class="small">Purpose . Visions . Goals . Aims</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right card -->
+                <div class="col-md-4 col-sm-4">
+                  <div class="card shadow-sm border-0">
+                    <img src="assets/img/dropmenu2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <small class="text-uppercase text-muted">Whitepaper</small>
+                      <h6 class="fw-bold mt-2">The Future of Hiring is Borderless</h6>
+                      <a href="#" class="stretched-link">Learn More →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- <li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li> -->
+                      <li class="nav-item dropdown position-static">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="aboutMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu mega-menu p-4 shadow" aria-labelledby="aboutMenu">
+              <div class="row">
+                <!-- Left content -->
+                <div class="col-md-8 col-sm-8">
+                  <h4 class="fw-bold mb-3">Our Services are:</h4>
+                  <!-- <p class="text-muted">We are a team of talented software developers raising the Next Generation of TechStars</p> -->
+                  <div class="row mt-4">
+                    <div class="col-md-6 col-sm-6 mb-3 border-end">
+                      <h6 class="fw-bold"><a href="services.html">Software Development Training</a></h6>
+                      <p class="small">We offer software development training at affoedable prize.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 mb-3">
+                      <h6 class="fw-bold"><a href="services.html">Kids Web Design 1</a></h6>
+                      <p class="small">We offer beginners simplified courses for you kids</p>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6 col-sm-6 mb-3 border-end">
+                      <h6 class="fw-bold"><a href="services.html">Kids Web Design 2</a></h6>
+                      <p class="small">We groom your kids to become a certified web developer</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 mb-3">
+                      <h6 class="fw-bold"><a href="services.html">Software Development</a></h6>
+                      <p class="small">We give your business an online presence by building top-notch Websites and Web Applications.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right card -->
+                <div class="col-md-4 col-sm-4">
+                  <div class="card shadow-sm border-0">
+                    <img src="assets/img/dropmenu2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <small class="text-uppercase text-muted">Whitepaper</small>
+                      <h6 class="fw-bold mt-2">The Future of Hiring is Borderless</h6>
+                      <a href="#" class="stretched-link">Learn More →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link text-white" href="index.html#team">Teams</a></li>
+          <!-- <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li> -->
+           <!-- Contact Dropdown -->
+<li class="nav-item dropdown">
+  <a class="nav-link text-white" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Contact
+  </a>
+  <div class="dropdown-menu mega-menu shadow-lg p-4 rounded-3" aria-labelledby="contactDropdown" 
+       style="width: 420px; left: 50%; transform: translateX(-50%);">
+    
+       <div class="row">
+    <!-- Company Info -->
+    <div class="col col-md-12 col-sm-6 mb-3 text-center">
+      <h5 class="fw-bold">Get in Touch</h5>
+      <p class="text-muted small mb-2">We’d love to hear from you. Reach us anytime!</p>
+      <p class="mb-1"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 123 Business Street, Lagos</p>
+      <p class="mb-1"><i class="bi bi-telephone-fill text-primary me-2"></i> +234 800 123 4567</p>
+      <p class="mb-3"><i class="bi bi-envelope-fill text-primary me-2"></i> support@alexzee.com</p>
+    </div>
+
+    <hr class="mt-1">
+
+    <!-- Contact Form -->
+    <div class="col col-md-12 col-sm-6">
+            <form>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+        <input type="text" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
+        <input type="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text bg-light"><i class="bi bi-chat-dots"></i></span>
+        <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100 rounded-pill">
+        <i class="bi bi-send me-1"></i> Send Message
+      </button>
+    </form>
+    </div>
+  </div>
+  </div>
+</li>
+
         </ul>
-        <div class="d-flex align-items-center gap-3">
-          <!-- Deep drop is supposed to be here so if you can acheive it -->
-          <a href="#"><i class="bi bi-person fs-5"></i></a>
-          <a href="#"><i class="bi bi-search fs-5"></i></a>
-          <!-- This is the link to get directly yout infornations -->
-          <a class="btn btn-primary" href="form.html">Get started</a>
-        </div>
+        <a href="#" class="btn btn-primary ms-lg-3 col-2">Get Started</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <!-- Background Video -->
-    <!-- it is supposed to be a bit blur -->
-    <video autoplay muted loop playsinline>
-      <source src="assets/img/banner-atuoplay.mp4" type="video/mp4">
-    </video>
+<!-- Hero Section with Form -->
+<section class="hero-form">
+  <div class="form-card">
+    <h3 class="mb-3 ">Application Form</h3>
+    <form>
+      <!-- 5 labeled input fields -->
+      <div class="mb-3 fw-bold">
+        <label for="fullname" class="form-label">Your Full Name</label>
+        <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" required>
+      </div>
+      <div class="mb-3 fw-bold">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="mb-3 fw-bold">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="mb-3 fw-bold">
+        <label for="city" class="form-label">Age</label>
+        <input type="text" class="form-control" id="city" placeholder="Enter your age" required>
+      </div>
 
-    <!-- Overlay -->
-    <div class="hero-overlay"></div>
 
-    <!-- Hero Content -->
-    <div class="container hero-content">
-      <div class="row">
-        <div class="col-lg-7">
-          <h1 class="display-4 fw-bold">
-            Kickstart your career in tech today with ZeeTech International
-          </h1>
-          <p class="lead mt-3">
-            We are team of talented software developers raising the Next Generation of TechStars
-          </p>
-          <div class="d-flex align-items-center gap-3 mt-4">
-            <a href="#" class="btn btn-warning btn-lg">Get started</a>
-            <a href="#" class="fw-bold text-white gap-3">Why ZeeTech International</a>
-          </div>
+      <!-- Radio group -->
+      <div class="mb-3">
+        <label class="form-label fw-bold">Select Your Training Path</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="option" id="option1">
+          <label class="form-check-label" for="option1">
+            Front-End Software Development
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="option" id="option2">
+          <label class="form-check-label" for="option2">
+            Website Design
+          </label>
         </div>
       </div>
+      <div class="mb-3 fw-bold">
+        <label for="address" class="form-label">Home Address</label>
+        <textarea class="form-control" id="address" rows="3" placeholder="Enter your home address" required></textarea>
     </div>
+      <div class="mb-3 fw-bold">
+        <label for="country" class="form-label">Country</label>
+        <select class="form-select" id="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="India">India</option>
+            <option value="Canada">Canada</option>
+            <option value="Canada">Nigera</option>
+            <option value="Canada">Swedish</option>
+            <option value="Canada">Kuwait</option>
+          
 
-    <!-- Stats -->
-     <!-- a white line is supposed to be inbetween them  -->
-    <div class="stats text-white py-4">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-6 col-md-3 mb-3 mb-md-0">
-            <h5 class="fw-bold"><span class="counter" data-target="13">0</span>+</h5>
-            <p class="mb-0 small">Clients</p>
-          </div>
-          <div class="col-6 col-md-3 mb-3 mb-md-0">
-            <h5 class="fw-bold"><span class="counter" data-target="3">0</span></h5>
-            <p class="mb-0 small">International Clients</p>
-          </div>
-          <div class="col-6 col-md-3">
-            <h5 class="fw-bold"><span class="counter" data-target="200">0</span></h5>
-            <p class="mb-0 small">Hours of Support</p>
-          </div>
-          <div class="col-6 col-md-3">
-            <h5 class="fw-bold"><span class="counter" data-target="3">0</span></h5>
-            <p class="mb-0 small">Workers</p>
-          </div>
-        </div>
-      </div>
+
+        </select>
+       
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary w-100 mt-5">Submit</button>
+    </form>
+  </div>
+</section>
+
+  <footer>
+  <div class="row mt-5 px-3 pt-5 justify-content-center bg-dark">
+    <div class="col col-lg-4 useful">
+          <h4 class="mb-3 ms-4 ps-1">Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
     </div>
-  </section>
+    <div class="col col-lg-4 our-services">
+       <h4 class="mb-3 ms-4 ps-1">Our Services</h4>
+          <ul>
+            <li><a href="#services">Web Design Training</a></li>
+            <li><a href="#services">Software Development Training</a></li>
+            <li><a href="#contact">Web Design</a></li>
+            <li><a href="#contact">Web Development</a></li>
+            <li><a href="#contact">Product Management</a></li>
+          </ul>
+    </div>
+    <div class="col col-lg-4">
+      <h4 class="mb-3">Contact Us</h4>
+          <p>18 Ikoyi-Tedo Street</p>
+          <p>Ajah Lekki, Lagos State</p>
+          <p>Nigeria</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+234 7067 509 905,</span> <span>+234 8036 308 495</span></p>
+          <p><strong>Email:</strong> <span>alexzeetechcademy@gmail.com</span></p>
+    </div>
+  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <div class="row footer-last pb-3 bg-dark">
+  <!-- First column -->
+  <div class="col-lg-6 col-md-6 col-sm-12 text-sm-center">
+    <img class="px-5" src="assets/img/dark_bg_logo.png" alt="logo" width="300px">
+  </div>
 
-  <!-- Counter Animation Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const counters = document.querySelectorAll(".counter");
-      const speed = 200; // lower = faster
+  <!-- Second column -->
+  <div class="col-lg-6 col-md-6 col-sm-12 socials d-flex flex-column align-items-center">
+  <div class="socials-links py-4">
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-twitter-x"></i></a>
+    <a href="#"><i class="bi bi-linkedin"></i></a>
+    <a href="#"><i class="bi bi-youtube"></i></a>
+    <a href="#"><i class="bi bi-github"></i></a>
+  </div>
 
-      const animateCounters = () => {
-        counters.forEach(counter => {
-          const updateCount = () => {
-            const target = +counter.getAttribute("data-target");
-            const count = +counter.innerText;
-            const increment = target / speed;
+  <div class="privacy text-center">
+    <p>© <span>Copyright</span> <strong>AlexZee</strong> <span>All Rights Reserved</span></p>
+    <div class="py-2">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</div>
 
-            if (count < target) {
-              counter.innerText = Math.ceil(count + increment);
-              setTimeout(updateCount, 20);
-            } else {
-              counter.innerText = target.toLocaleString();
-            }
-          };
-          updateCount();
-        });
-      };
+</div>
 
-      // Trigger animation when stats enter viewport
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateCounters();
-            observer.disconnect(); // run once
-          }
-        });
-      }, { threshold: 0.5 });
+  </div>
+</footer>
 
-      observer.observe(document.querySelector(".stats"));
-    });
-  </script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Navbar Scroll Script -->
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) { // Change to 1 if you want instant effect
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
 
 </body>
 </html>

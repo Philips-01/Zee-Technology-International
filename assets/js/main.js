@@ -1,3 +1,50 @@
+// nav bg
+document.addEventListener('DOMContentLoaded', function () {
+  const nav = document.querySelector('.navbar');
+  if (!nav) return;
+
+  // Force fixed (in case some other CSS tries to change it)
+  nav.style.position = 'fixed';
+  nav.style.top = '0';
+  nav.style.left = '0';
+  nav.style.right = '0';
+  nav.style.zIndex = '9999';
+
+  // Apply correct body padding so content starts below the fixed navbar
+  function setBodyPadding() {
+    document.body.style.setProperty('--nav-height', nav.offsetHeight + 'px');
+  }
+  setBodyPadding();
+  window.addEventListener('resize', setBodyPadding);
+
+  // Try to observe the ".hero" (video hero) — this is robust and fires on the very first tiny scroll
+  const hero = document.querySelector('.video-background .hero') || document.querySelector('.hero');
+
+  if (hero) {
+    const obs = new IntersectionObserver((entries) => {
+      const e = entries[0];
+      // If hero is NOT fully visible (i.e. we've scrolled even a bit), add class
+      if (e.intersectionRatio < 0.99) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }, { threshold: [0.99] });
+
+    obs.observe(hero);
+  } else {
+    // Fallback: listen to window scroll (works normally)
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+  }
+});
+
+  
+
+
+// stat
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
     const speed = 200; // lower is faster

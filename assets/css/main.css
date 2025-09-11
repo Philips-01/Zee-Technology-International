@@ -17,6 +17,78 @@ body, html {
       margin-top: 20px;
     } */
 
+    .navbar {
+  /* position: relative;
+  z-index: 3; higher than hero (2) */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+   background-color: transparent;
+      position: fixed;   /* instead of relative */
+  top: 0;
+  left: 0;
+  width: 100%;       /* make sure it spans across */
+  z-index: 1000;     /* stays above video + content */
+
+}
+.navbar.scrolled {
+  background-color: black !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Link colors: white on transparent, dark on scrolled */
+.navbar .nav-link,
+.navbar .navbar-text,
+.navbar .btn {
+  color: #fff !important;
+  transition: color 180ms ease;
+}
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-text,
+.navbar.scrolled .btn {
+  color: white !important;
+}
+
+/* Make sure dropdowns show above everything */
+.dropdown-menu { 
+  z-index: 10010 !important; 
+}
+
+    /* Remove default dropdown caret */
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+
+    .dropdown-menu.mega-menu {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  left: 0 !important;
+  transform: none !important;
+}
+
+.nav-item a{
+  font-size: larger;
+}
+
+/* Medium screens and up - center it */
+@media (min-width: 768px) {
+  .dropdown-menu.mega-menu {
+    width: 75%;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    padding: 2rem;
+    border-radius: 20px;
+  }
+}
+
+    /* Keep it centered with container */
+    .dropdown-menu.mega-menu .mega-content {
+      max-width: 1140px; /* You can use 960px, 1320px, etc depending on preference */
+      margin: 0 auto;   /* Center it */
+    }
+
+
+
     .video-background {
       position: relative;
       height: 100vh; /* full screen height */
@@ -51,18 +123,25 @@ body, html {
     min-height: 100vh; /* fills the screen */
     position: relative;
     z-index: 2; /* above the video */
-    padding-top: 100px; /* offset navbar height */
+    padding-top: 200px; /* offset navbar height */
   }
-  .kickstart{
+  /* .kickstart{
     margin-top: -160px;
-  }
+  } */
   .get-started{
     margin-right: 30px;
   }
 
   .counter {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
+  }
+  .counter-border{
+    border-left: 1px solid white;
+  }
+
+  .counter-border p{
+    color: #0056b3;
   }
 
   .border-start {
@@ -80,6 +159,10 @@ body, html {
     color: black;
   }
 
+  .get-started:hover{
+    background-color: #FF6B00;
+    border: #FF6B00;
+  }
 
 /* Scrollable Content */
  .parent {
