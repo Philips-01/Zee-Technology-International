@@ -1,0 +1,116 @@
+  body {
+
+      overflow-x: hidden;
+    }
+    .navbar a:hover,
+.nav-link:hover
+.stretched-link:hover
+{
+  color: #0056b3;
+  text-decoration: underline;
+}
+    section {
+      padding: 80px 0;
+    }
+    .icon-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease-in-out;
+    }
+    .icon-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .icon-box i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #0d6efd; /* main blue */
+    }
+    .stats h3 {
+      font-weight: bold;
+      font-size: 2rem;
+      color: #fd7e14; /* orange */
+    }
+    .banner {
+      color: white;
+      /* height: 45vh; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .highlight {
+      color: #fd7e14; /* orange highlight */
+      font-weight: bold;
+    }
+
+
+        .navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+   background-color: black;
+      position: sticky;   /* instead of relative */
+  top: 0;
+  left: 0;
+  width: 100%;       /* make sure it spans across */
+  z-index: 1;
+
+}
+.navbar.scrolled {
+  background-color: black !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Link colors: white on transparent, dark on scrolled */
+.navbar .nav-link,
+.navbar .navbar-text,
+.navbar .btn {
+  color: #fff !important;
+  transition: color 180ms ease;
+}
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-text,
+.navbar.scrolled .btn {
+  color: white !important;
+}
+
+/* Make sure dropdowns show above everything */
+.dropdown-menu { 
+  z-index: 10010 !important; 
+}
+
+    /* Remove default dropdown caret */
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+
+    .dropdown-menu.mega-menu {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  left: 0 !important;
+  transform: none !important;
+}
+
+.nav-item a{
+  font-size: larger;
+}
+
+/* Medium screens and up - center it */
+@media (min-width: 768px) {
+  .dropdown-menu.mega-menu {
+    width: 75%;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    padding: 2rem;
+    border-radius: 20px;
+  }
+}
+
+    /* Keep it centered with container */
+    .dropdown-menu.mega-menu .mega-content {
+      max-width: 1140px; /* You can use 960px, 1320px, etc depending on preference */
+      margin: 0 auto;   /* Center it */
+    }
