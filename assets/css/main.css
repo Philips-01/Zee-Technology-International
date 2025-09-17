@@ -78,6 +78,10 @@ body, html {
   text-decoration: underline;
 }
 
+.useful ul li:hover{
+  color: #0056b3;
+}
+
 /* Medium screens and up - center it */
 @media (min-width: 768px) {
   .dropdown-menu.mega-menu {

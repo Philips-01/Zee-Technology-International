@@ -9,6 +9,9 @@
   color: #0056b3;
   text-decoration: underline;
 }
+.useful ul li:hover{
+  color: #0056b3;
+}
     section {
       padding: 80px 0;
     }
