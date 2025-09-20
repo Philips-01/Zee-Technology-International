@@ -27,6 +27,8 @@ body, html {
   left: 0;
   width: 99%;       /* make sure it spans across */
   z-index: 1000;     /* stays above video + content */
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
 
 }
 .navbar.scrolled {
@@ -70,12 +72,30 @@ body, html {
   font-size: larger;
 }
 
+@media (max-width: 1126px) {
+  .navbar a {
+    font-size: 12px; /* smaller size for medium screen */
+  }
+}
+
+@media (min-width: 1126px) and (max-width: 1212px) {
+  .navbar a {
+    font-size: 14px; /* smaller size for medium screen */
+  }
+}
+
+
+
 .navbar a:hover,
 .nav-link:hover
 .stretched-link:hover
 {
   color: #0056b3;
   text-decoration: underline;
+}
+.nav-link:hover{
+  background: linear-gradient(90deg, #0077ff, #9b59b6);
+  border-radius: 20px;
 }
 
 .useful ul li:hover{

@@ -11,28 +11,33 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/service.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg px-lg-5 bg-dark">
+  <nav class="navbar navbar-expand-lg px-lg-5" style="background-color: black;">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="assets/img/dark_bg_logo.png" alt="Logo" width="150" class="me-2">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" style="background-color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" viewBox="0 0 30 30">
+  <path stroke="black" stroke-width="2" stroke-linecap="round" d="M4 7h22M4 15h22M4 23h22"/>
+</svg>
+</span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="history.html">Why ZeeTech?</a></li>
-          <!-- <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li> -->
+          <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li class="nav-item mx-lg-3"><a class="nav-link text-white" href="history.html"><i class="fa-solid fa-question-circle"></i>Why ZeeTech?</a></li>
            <li class="nav-item dropdown position-static">
             <a class="nav-link dropdown-toggle text-white" href="#" id="aboutMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              About
+              <i class="fa-solid fa-circle-info"></i>About
             </a>
             <div class="dropdown-menu mega-menu p-4 shadow" aria-labelledby="aboutMenu">
               <div class="row">
@@ -78,8 +83,8 @@
           </li>
           <!-- <li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li> -->
                       <li class="nav-item dropdown position-static">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="aboutMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Services
+            <a class="nav-link dropdown-toggle text-white mx-lg-3" href="#" id="aboutMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-briefcase"></i>Services
             </a>
             <div class="dropdown-menu mega-menu p-4 shadow" aria-labelledby="aboutMenu">
               <div class="row">
@@ -123,12 +128,12 @@
               </div>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link text-white" href="#team">Teams</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#team"><i class="fa-solid fa-users"></i>Teams</a></li>
           <!-- <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li> -->
            <!-- Contact Dropdown -->
 <li class="nav-item dropdown">
-  <a class="nav-link text-white" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Contact
+  <a class="nav-link text-white mx-lg-3" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-envelope"></i>Contact
   </a>
   <div class="dropdown-menu mega-menu shadow-lg p-4 rounded-3" aria-labelledby="contactDropdown" 
        style="width: 420px; left: 50%; transform: translateX(-50%);">
@@ -139,8 +144,8 @@
       <h5 class="fw-bold">Get in Touch</h5>
       <p class="text-muted small mb-2">We’d love to hear from you. Reach us anytime!</p>
       <p class="mb-1"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 123 Business Street, Lagos</p>
-      <p class="mb-1"><i class="bi bi-telephone-fill text-primary me-2"></i> +234 800 123 4567</p>
-      <p class="mb-3"><i class="bi bi-envelope-fill text-primary me-2"></i> support@alexzee.com</p>
+      <p class="mb-1"><i class="bi bi-telephone-fill text-primary me-2"></i> +234 706 750 9905</p>
+      <p class="mb-3"><i class="bi bi-envelope-fill text-primary me-2"></i> zeetechcademy@gmail.com</p>
     </div>
 
     <hr class="mt-1">
@@ -326,10 +331,9 @@
     <div class="col col-lg-4">
       <h4 class="mb-3">Contact Us</h4>
           <p>18 Ikoyi-Tedo Street</p>
-          <p>Ajah Lekki, Lagos State</p>
-          <p>Nigeria</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+234 7067 509 905,</span> <span>+234 8036 308 495</span></p>
-          <p><strong>Email:</strong> <span>alexzeetechcademy@gmail.com</span></p>
+          <p>Ajah Lekki, Lagos State, Nigeria.</p>
+          <p class="mt-2"><strong>Phone:</strong> <span>+234 7067 509 905,</span></p>
+          <p><strong>Email:</strong> <span>zeetechcademy@gmail.com</span></p>
     </div>
   </div>
 
@@ -350,7 +354,6 @@
   </div>
 
   <div class="privacy text-center">
-    <p>© <span>Copyright</span> <strong>AlexZee</strong> <span>All Rights Reserved</span></p>
     <div class="py-2">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Service</a>
@@ -361,6 +364,11 @@
 
 </div>
 
+  </div>
+  <div class="row text-center">
+    <div class="col">
+      <p>© <span>Copyright</span> <strong>Zee Technology International</strong> <span>All Rights Reserved</span></p>
+    </div>
   </div>
 </footer>
   
