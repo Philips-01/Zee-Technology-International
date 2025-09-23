@@ -91,7 +91,7 @@ body, html {
 .stretched-link:hover
 {
   color: #0056b3;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .nav-link:hover{
   background: linear-gradient(90deg, #0077ff, #9b59b6);
