@@ -40,3 +40,32 @@ window.addEventListener("scroll", function() {
     navbar.classList.remove("scrolled");
   }
 });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+  const dropdowns = document.querySelectorAll('.navbar .dropdown');
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle, .nav-link');
+
+    toggle.addEventListener('click', function(e) {
+      if (window.innerWidth < 992) {
+        e.preventDefault();
+
+        const isOpen = dropdown.classList.contains('show');
+
+        // Close other dropdowns
+        document.querySelectorAll('.navbar .dropdown.show').forEach(open => {
+          open.classList.remove('show');
+          open.querySelector('.dropdown-menu').style.display = 'none';
+        });
+
+        // Toggle the current one
+        if (!isOpen) {
+          dropdown.classList.add('show');
+          dropdown.querySelector('.dropdown-menu').style.display = 'block';
+        }
+      }
+    });
+  });
+});
