@@ -25,7 +25,7 @@ body, html {
       position: fixed;   /* instead of relative */
   top: 0;
   left: 0;
-  width: 99%;       /* make sure it spans across */
+  width: 100%;       /* make sure it spans across */
   z-index: 1000;     /* stays above video + content */
   /* font-family: 'Poppins', sans-serif; */
   font-family: 'Montserrat', sans-serif;
@@ -105,8 +105,8 @@ body, html {
 /* Medium screens and up - center it */
 @media (min-width: 768px) {
   .dropdown-menu.mega-menu {
-    width: 75%;
-    left: 50% !important;
+    width: 95%;
+    left: 40% !important;
     transform: translateX(-50%) !important;
     padding: 2rem;
     border-radius: 20px;

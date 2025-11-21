@@ -1,18 +1,14 @@
   body {
-
       overflow-x: hidden;
     }
 
-
-
-    
-    .navbar a:hover,
-.nav-link:hover
-.stretched-link:hover
-{
-  color: #0056b3;
-  text-decoration: none;
-}
+  .navbar a:hover,
+  .nav-link:hover
+  .stretched-link:hover
+  {
+    color: #0056b3;
+    text-decoration: none;
+  }
 .nav-link:hover{
   background: linear-gradient(90deg, #0077ff, #9b59b6);
   border-radius: 20px;
@@ -96,7 +92,7 @@
       display: none !important;
     }
 
-    .dropdown-menu.mega-menu {
+.dropdown-menu.mega-menu {
   width: 100%;
   border: none;
   border-radius: 20px;
@@ -170,5 +166,11 @@
     width: 100%;
     margin-top: 10px;
     margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html,body{
+    overflow-x: hidden;
   }
 }
