@@ -57,7 +57,7 @@
         .navbar {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
    background-color: black;
-      position: sticky;   /* instead of relative */
+  position: sticky;   /* instead of relative */
   top: 0;
   left: 0;
   width: 100%;       /* make sure it spans across */
