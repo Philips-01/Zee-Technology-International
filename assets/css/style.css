@@ -84,6 +84,7 @@ a {
     overflow: hidden;
     transition: all 0.3s ease;
     min-height: 120px; /* keeps all cards aligned */
+    font-size: 13px;
 }
 
 .testimonial-card.expanded .testimonial-text {
